@@ -3,18 +3,6 @@
 #include <sys/time.h>
 #include <omp.h>
 
-void imprimirMatriz(double **matrix,int row,int columns){
-  std::cout << std::endl;
-  /*Imprimiendo*/
-  for(int i = 0; i < row; i++){
-    for(int j = 0; j < columns; j++){
-      std::cout << matrix[i][j] << "\t";
-    }
-    std::cout << std::endl;
-  }
-  std::cout << std::endl;
-}
-
 void inicializar(int p,int q,int r, double **&A,double **&B,double **&C){
   A = new double*[p];
   B = new double*[q];
@@ -68,7 +56,6 @@ int main(int argc, char **argv){
   double **A, **B, **C;
   struct timeval start, end;
 
-  //srand(time(NULL));
   inicializar(p,q,r,A,B,C);
   gettimeofday(&start, NULL);
   multiplicarParalelo(p,q,r,w,A,B,C);
@@ -76,9 +63,6 @@ int main(int argc, char **argv){
   double delta = ((end.tv_sec  - start.tv_sec) * 1000000u +
          end.tv_usec - start.tv_usec) / 1.e6;
   std::cout << "Tiempo en segundos: " << delta << std::endl;
-  //imprimirMatriz(A,p,q);
-  //imprimirMatriz(B,q,r);
-  //imprimirMatriz(C,p,r);
 
   return 0;
 }
