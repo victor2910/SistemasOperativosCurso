@@ -38,7 +38,6 @@ int main(int argc, char **argv){
   int n = atoi(argv[1]);
   double **A, **B, **C;
   struct timeval start, end;
-  //srand(time(NULL));
   inicializar(n,A,B,C);
   gettimeofday(&start, NULL);
   multiplicar(n,A,B,C);
