@@ -2,18 +2,6 @@
 #include <cstdlib>
 #include <sys/time.h>
 
-void imprimirMatriz(double **matrix,int size){
-  std::cout << std::endl;
-  /*Imprimiendo*/
-  for(int i = 0; i < size; i++){
-    for(int j = 0; j < size; j++){
-      std::cout << matrix[i][j] << "\t";
-    }
-    std::cout << std::endl;
-  }
-  std::cout << std::endl;
-}
-
 void inicializar(int n, double **&A,double **&B,double **&C){
   A = new double*[n];
   B = new double*[n];
@@ -58,9 +46,6 @@ int main(int argc, char **argv){
   double delta = ((end.tv_sec  - start.tv_sec) * 1000000u +
          end.tv_usec - start.tv_usec) / 1.e6;
   std::cout << "Tiempo en segundos: " << delta << std::endl;
-  //imprimirMatriz(A,n);
-  //imprimirMatriz(B,n);
-  //imprimirMatriz(C,n);
 
   return 0;
 }
