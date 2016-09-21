@@ -36,10 +36,6 @@ void multiplicarParalelo(int n, int p,double **&A,double **&B, double **&C){
   }
 }
 
-void decir(std::string s){
-  std::cout << s << std::endl;
-}
-
 int main(int argc, char **argv){
   int n = atoi(argv[1]);
   int p = atoi(argv[2]);
