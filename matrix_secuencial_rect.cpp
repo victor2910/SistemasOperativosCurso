@@ -37,10 +37,6 @@ void multiplicar(int p,int q,int r, double **&A,double **&B, double **&C){
   }
 }
 
-void decir(std::string s){
-  std::cout << s << std::endl;
-}
-
 int main(int argc, char **argv){
   int p = atoi(argv[1]);
   int q = atoi(argv[2]);
