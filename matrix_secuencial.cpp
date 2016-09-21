@@ -30,10 +30,6 @@ void multiplicar(int n, double **&A,double **&B, double **&C){
   }
 }
 
-void decir(std::string s){
-  std::cout << s << std::endl;
-}
-
 int main(int argc, char **argv){
   int n = atoi(argv[1]);
   double **A, **B, **C;
